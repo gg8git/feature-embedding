@@ -1,5 +1,5 @@
 from compile_dataset import compile_dataset
-from testing import test
+from test import test
 
 compile_dataset()
 

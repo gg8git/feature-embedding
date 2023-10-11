@@ -1,6 +1,8 @@
+# Finetune the T5 transformer model based on the compiled dataset.
+
 from transformers import T5ForConditionalGeneration, TrainingArguments, Trainer
 from compile_dataset import get_valence_dataset
-from format_dataset import tokenize_data
+from tokenization import tokenize_data
 
 def model_finetuning():
     model_name = "t5-small"

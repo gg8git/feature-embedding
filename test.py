@@ -1,5 +1,7 @@
+# Return model generated results from new prompt texts.
+
 from transformers import T5Tokenizer
-from model_finetune import model_finetuning
+from finetune import model_finetuning
 
 def test(prompt):
     model_name = "t5-small"
@@ -7,8 +9,10 @@ def test(prompt):
 
     model = model_finetuning()
 
+    # tokenize prompt for model
     input_ids = tokenizer.encode(prompt, return_tensors="pt")
 
+    # obtain and manipulate model generated results
     output = model.generate(input_ids)
     res = float(tokenizer.decode(output[0], skip_special_tokens=True))
 

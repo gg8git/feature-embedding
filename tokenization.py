@@ -1,3 +1,5 @@
+# Tokenize text dataset for model finetuning process.
+
 from transformers import T5Tokenizer
 import tensorflow as tf
 
